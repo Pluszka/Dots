@@ -28,6 +28,7 @@ from random import choice
 turtle.colormode(255)
 
 Andy = Turtle()
+Andy.hideturtle()
 Andy.penup()
 Andy.goto(-300, 250)
 print(Andy.position())
