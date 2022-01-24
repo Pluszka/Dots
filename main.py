@@ -34,7 +34,6 @@ Andy.penup()
 Andy.goto(-290, 290)
 print(Andy.position())
 
-#TODO 1 def place to start
 
 def one_line():
     for spot in range(20):
