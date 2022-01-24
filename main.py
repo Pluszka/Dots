@@ -9,8 +9,9 @@
 #     g = color.rgb.g
 #     b = color.rgb.b
 #     rgb_colors.append((r, g, b))
+import turtle
 
-nonwhite_colors=[
+nonwhite_colors = [
     (222, 163, 66), (19, 45, 87), (136, 61, 84), (177, 60, 44),
  (126, 40, 61), (21, 86, 61), (59, 48, 37), (250, 194, 42),
  (13, 117, 146), (57, 146, 72), (229, 86, 36), (231, 172, 190),
@@ -20,4 +21,23 @@ nonwhite_colors=[
  (120, 41, 33), (170, 203, 205), (223, 178, 169)
  ]
 
-print(rgb_colors)
+
+from turtle import Turtle, Screen
+from random import choice
+
+Andy = Turtle()
+
+turtle.colormode(255)
+Andy.penup()
+
+#TODO 1 def place to start
+def one_line():
+    for spot in range(20):
+        Andy.dot(20, choice(nonwhite_colors))
+        Andy.forward(100)
+
+
+one_line()
+
+screen = Screen()
+screen.exitonclick()
