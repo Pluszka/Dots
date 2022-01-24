@@ -28,9 +28,10 @@ from random import choice
 turtle.colormode(255)
 
 Andy = Turtle()
+Andy.speed(0)
 Andy.hideturtle()
 Andy.penup()
-Andy.goto(-300, 250)
+Andy.goto(-290, 290)
 print(Andy.position())
 
 #TODO 1 def place to start
@@ -38,13 +39,12 @@ print(Andy.position())
 def one_line():
     for spot in range(20):
         Andy.dot(13, choice(nonwhite_colors))
-        Andy.forward(30)
+        if spot != 19:
+            Andy.forward(30)
 
-for lines in range(20):
+for lines in range(1,21):
     one_line()
-    Andy.setheading(270)
-    Andy.forward(30)
-    Andy.setheading(180)
+    Andy.goto(-290, 290 - lines*30)
 
 screen = Screen()
 screen.exitonclick()
