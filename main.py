@@ -25,16 +25,19 @@ nonwhite_colors = [
 from turtle import Turtle, Screen
 from random import choice
 
-Andy = Turtle()
-
 turtle.colormode(255)
+
+Andy = Turtle()
 Andy.penup()
+Andy.goto(-300, 250)
+print(Andy.position())
 
 #TODO 1 def place to start
+
 def one_line():
     for spot in range(20):
-        Andy.dot(20, choice(nonwhite_colors))
-        Andy.forward(100)
+        Andy.dot(13, choice(nonwhite_colors))
+        Andy.forward(30)
 
 
 one_line()
